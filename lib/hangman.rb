@@ -1,5 +1,6 @@
 require_relative 'initialize'
 require_relative 'sort_word'
+require_relative 'try_again'
 
 class Hangman
 
@@ -23,6 +24,8 @@ class Hangman
                     puts line
                 end                      
             end
+            continue = TryAgain.new
+            continue.trying
         end
     end
 end
