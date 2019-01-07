@@ -1,3 +1,4 @@
+
 require 'tty-cursor'
 require 'tty-spinner'
 
@@ -17,4 +18,4 @@ class Initial
         sleep(5)
         end
     end
-end   
+end 

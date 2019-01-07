@@ -1,9 +1,19 @@
+require_relative 'initialize'
+require_relative 'sort_word'
 require_relative 'try_again'
 require 'pry'
 
 class Hangman
 
-    
+    attr_reader :word
+    attr_reader :won
+
+    def initialize
+        Initial.initializing
+        @word = SortWord.sort
+        @won = false
+        puts @word.join('')
+    end
 
     def TryToGuess(word = "0")
         if @word.include?(word.chomp)
